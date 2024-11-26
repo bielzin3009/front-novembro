@@ -7,13 +7,78 @@
     <title>Javascript</title>
 
     <script>
-        alert("Quase fui assaltado hj pprt")
+
+        function oi() {
+            var nome = "";
+            nome = prompt("Digite seu nome")
+
+            alert("Cala a boca ai " + nome + "");
+        }
+
+        function maior() {
+            var n1 = prompt("digite um número");
+            var n2 = prompt("digite outro número");
+
+            if (n1 > n2) {
+                alert("O número maior é " + n1);
+            } else if (n1 < n2) {
+                alert("O número maior é " + n2);
+            } else {
+                alert("Os números são iguais");
+            }
+
+        }
+
+        function maior3() {
+            var n1 = prompt("digite um número");
+            var n2 = prompt("digite outro número");
+            var n3 = prompt("digite mais um número")
+
+            if (n1 > n2) 
+            {
+                if (n1 > n3) {
+                    alert("O número maior é " + n1);
+                } else 
+                {
+                    alert("O número maior é o "+n3)
+                }
+            } else 
+            {
+                if (n2 > n3) {
+                    alert("O número maior é " + n2);
+                } else {
+                    alert("O número maior é " + n3);
+                }
+            }
+        }
+
+
+        // tipos de variaveis 
+        var nome = "gabriel"; //texto = string
+        var idade = 23; // numero = intero = int 
+        var peso = 60.2; // numeros com , = float
+        var acordado = true // boolean 
+
+        //algoritimo
+        // > = maior
+        // < = menos
+        // == = igual
+        // >= = maior ou igual
+        // <= = menor ou igual
+        // != = diferente
+
     </script>
 </head>
 
 <body>
-    
+
     <h1>Javascript</h1>
+
+    <button onclick="oi()">Clique aqui paezao</button>
+
+    <button onclick="maior()">Qual é o maior?</button>
+
+    <button onclick="maior3()">Qual é o maior do 3?</button>
 
 </body>
 
