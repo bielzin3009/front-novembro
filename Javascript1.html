@@ -52,6 +52,24 @@
             }
         }
 
+        function ola(){
+            var idade;
+            idade = prompt("Digite sua idade");
+
+            if (idade < 2) {
+                alert("Bebê")
+            }else if (idade < 12) {
+                alert("Criança")
+            }else if (idade < 18) {
+                alert("Adolecente")
+            }else if (idade < 60) {
+                alert("Adulto")
+            }else {
+                alert("Idoso")
+            }
+        }
+
+
 
         // tipos de variaveis 
         var nome = "gabriel"; //texto = string
@@ -79,6 +97,8 @@
     <button onclick="maior()">Qual é o maior?</button>
 
     <button onclick="maior3()">Qual é o maior do 3?</button>
+
+    <button onclick="ola()">Digite sua idade</button>
 
 </body>
 
