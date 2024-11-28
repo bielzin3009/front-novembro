@@ -14,6 +14,16 @@
             resultado.innerText = texto;
         }
 
+        function maiusculas() {
+            var texto = entrada.value
+            resultado.innerText = texto.toUpperCase()
+        }
+
+        function pm() {
+            var texto = entrada.value
+            resultado.innerText = texto.charAt(0).toUpperCase() + texto.slice(1).toLowerCase()
+        }
+
     </script>
 
     <style>
@@ -22,6 +32,10 @@
             border: solid black 1px;
             margin-top: 18px;
             padding: 4px;
+        }
+
+        button {
+            border-radius: 20px;
         }
 
     </style>
@@ -34,7 +48,10 @@
 
     <input id="entrada" type="text">
     <button onclick="clique()">Clique aqui</button>
+    <button onclick="maiusculas()">Maiusculas</button>
+    <button onclick="pm()">Apenas primeira maiuscula</button>
     <div id="resultado" class="texto">Resultado</div>
+    
     
 </body>
 

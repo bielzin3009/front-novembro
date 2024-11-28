@@ -9,15 +9,73 @@
 
     <script>
 
+        var ini = 1
+        var fim = 10
+
+        while (fim >= ini) {
+            console.log(fim);
+            fim = fim - 1;
+        } 
+
         var cidade = ["Curitiba", "Porto União", "União da Vitória"];
 
+        function listar() {
+
+            var ini = 0;
+            var fim = cidade.length - 1;
+            var res = "<ul>";
+
+                while(ini <= fim) {
+                res = res + "<li>"+ cidade[ini] +"</li>";
+                ini = ini + 1;
+            }
+
+            res = res + "</ul>";
+
+
+                resultado.innerHTML = res;
+        }
+
+        function add() {
+            var texto = nome.value;
+            if (cidade.includes(texto) == false) {
+                cidade.push(texto);
+            }
+
+            listar();
+        }
+
+        function ordem() {
+            cidade.sort();
+            listar();
+        }
+
     </script>
+
+    <style>
+
+        .texto {
+            border: solid black 1px;
+            margin-top: 18px;
+            padding: 4px;
+        }
+
+    </style>
 
 </head>
 
 <body>
     
     <h1>Vetores</h1>
+
+    <button onclick="listar()">Listar</button>
+    <button onclick="ordem()">Ordem Alfabética</button>
+    <br>
+
+    <input type="text" id="nome"/>
+    <button onclick="add()">Adicionar</button>
+
+    <div id="resultado" class="texto">Resultado</div>
 
 </body>
 
